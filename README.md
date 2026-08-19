@@ -1,12 +1,45 @@
-# React + Vite
+# React ToDo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Простой менеджер задач, созданный в учебных целях для изучения базовых концепций React и инструментов сборки Vite.
 
-Currently, two official plugins are available:
+## Цель проекта
+Освоить ключевые возможности React:
+* Компонентную архитектуру.
+* Управление состоянием через хуки (`useState`, `useEffect`).
+* Передачу данных через `props`.
+* Работу с событиями и формами.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Функционал
+* Создание, выполнение и удаление задач.
+* Фильтрация (Все / Активные / Завершенные).
+* Поиск задач
+* ...
 
-## Expanding the ESLint configuration
+## Стек технологий
+* React
+* Vite
+* JavaScript
+* CSS
+* SCSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Запуск проекта
+
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/Davo-web/To-Do-app-on-React
+   ```
+
+2. Перейдите в папку проекта:
+   ```bash
+   cd название-репозитория
+   ```
+
+3. Установите зависимости:
+   ```bash
+   npm install
+   ```
+
+4. Запустите сервер для разработки:
+   ```bash
+   npm run dev
+   ```
