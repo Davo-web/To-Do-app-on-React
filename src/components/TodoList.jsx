@@ -20,24 +20,13 @@ const TodoList = (props) => {
         <ul className="todo__list">
             {tasks.map(task => (
                 <TodoItem
-                    className = 'todo__item'
                     {...task}
+                    className = 'todo__item'
+                    key = {task.id}
                     onDeleteTaskButtonClick={onDeleteTaskButtonClick}
                     onTaskCompleteChange={onTaskCompleteChange}
-                    key = {task.id}
                 />
             ))}
-
-
-            {/* {tasks.map(task => (
-                <TodoItem
-                    className = 'todo__item'
-                    id = {task.id}
-                    title = {task.title}
-                    isDone = {task.isDone}
-                    key = {task.id}
-                />
-            ))} */}
         </ul>
     )
 }
