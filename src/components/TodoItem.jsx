@@ -1,5 +1,6 @@
 import { memo, useContext } from "react"
 import { TasksContext } from "../context/TaskContext.jsx"
+import RouterLink from "./RouterLink.jsx"
 
 const TodoItem = (props) => {
     const {
@@ -29,11 +30,14 @@ const TodoItem = (props) => {
                 onChange={(event) => toggleTaskComplete(id, event.target.checked)}
             />
             <label
-                className="todo-item__label"
+                className="todo-item__label visually-hidden"
                 htmlFor={id}
             >
                 {title}
             </label>
+            <RouterLink to={`/tasks/${id}`} aria-label="Tasl detail page">
+                {title}
+            </RouterLink>
             <button
                 className="todo-item__delete-button"
                 aria-label="Delete"
@@ -41,19 +45,19 @@ const TodoItem = (props) => {
                 onClick={() => deleteTask(id)}
             >
                 <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                 >
-                <path
-                    d="M15 5L5 15M5 5L15 15"
-                    stroke="#757575"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
+                    <path
+                        d="M15 5L5 15M5 5L15 15"
+                        stroke="#757575"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                    />
                 </svg>
             </button>
         </li>
