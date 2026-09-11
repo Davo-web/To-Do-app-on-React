@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useMemo } from "react";
 import useTasks from "./useTasks";
 import useIncompleteTaskScroll from "./useIcompleteTaskScroll";
 
@@ -15,7 +15,7 @@ export const TaskProvider = (props) => {
         toggleTaskComplete,
         newTaskTitle,
         setNewTaskTitle,
-        searchQuery, 
+        searchQuery,
         setSearchQuery,
         newTaskInputRef,
         addTask,
@@ -28,28 +28,43 @@ export const TaskProvider = (props) => {
         firstIncompleteTaskId,
     } = useIncompleteTaskScroll(tasks)
 
+    const value = useMemo(() => ({
+        tasks,
+        filteredTasks,
+        deleteAllTasks,
+        deleteTask,
+        toggleTaskComplete,
+        newTaskTitle,
+        setNewTaskTitle,
+        searchQuery,
+        setSearchQuery,
+        newTaskInputRef,
+        addTask,
+        disappearingTaskId,
+        appearingTaskId,
+        firstIncompleteTaskRef,
+        firstIncompleteTaskId,
+    }), [
+        tasks,
+        filteredTasks,
+        deleteAllTasks,
+        deleteTask,
+        toggleTaskComplete,
+        newTaskTitle,
+        setNewTaskTitle,
+        searchQuery,
+        setSearchQuery,
+        newTaskInputRef,
+        addTask,
+        disappearingTaskId,
+        appearingTaskId,
+        firstIncompleteTaskRef,
+        firstIncompleteTaskId,
+    ])
+
 
     return (
-        <TasksContext.Provider
-            value={{
-                tasks,
-                filteredTasks,
-                firstIncompleteTaskRef,
-                firstIncompleteTaskId,
-                deleteAllTasks,
-                deleteTask,
-                toggleTaskComplete,
-
-                newTaskTitle,
-                setNewTaskTitle,
-                searchQuery, 
-                setSearchQuery,
-                newTaskInputRef,
-                addTask,
-                disappearingTaskId,
-                appearingTaskId,
-            }}
-        >
+        <TasksContext.Provider value={value}>
             {children}
         </TasksContext.Provider>
     )
