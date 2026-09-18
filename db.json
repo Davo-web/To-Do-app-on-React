@@ -1,39 +1,19 @@
 {
   "tasks": [
     {
-      "title": "мама",
+      "title": "1",
       "isDone": false,
-      "id": "8f6-Uv_DyYQ"
+      "id": "rYJcB5foVqA"
     },
     {
-      "title": "папа",
+      "title": "2",
       "isDone": false,
-      "id": "NEHfkn4daDM"
+      "id": "qp2XFshGsXE"
     },
     {
-      "title": "атам",
+      "title": "3",
       "isDone": false,
-      "id": "LBuuvD8DSos"
-    },
-    {
-      "title": "стол",
-      "isDone": false,
-      "id": "WJHBHnSM6eo"
-    },
-    {
-      "title": "первая",
-      "isDone": false,
-      "id": "XCZdJTCRkb0"
-    },
-    {
-      "title": "вторая",
-      "isDone": false,
-      "id": "5YeoEzqalt8"
-    },
-    {
-      "title": "<img>",
-      "isDone": false,
-      "id": "rTaKlPRQ9WQ"
+      "id": "V4D08uAaKQo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

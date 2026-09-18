@@ -6,10 +6,10 @@ import { TasksContext } from "@/enities/todo"
 const AddTaskForm = (props) => {
     const { styles } = props
 
+    const [newTaskTitle, setNewTaskTitle] = useState('');
+
     const {
         addTask,
-        newTaskTitle,
-        setNewTaskTitle,
         newTaskInputRef,
     } = useContext(TasksContext)
 
@@ -20,7 +20,8 @@ const AddTaskForm = (props) => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        if ( !isNewTaskTitleEmpty ) addTask(clearNewTaskTitle);
+        if (!isNewTaskTitleEmpty) 
+            addTask(clearNewTaskTitle, () => setNewTaskTitle(''));
     }
 
     const onInput = (event) => {
@@ -36,12 +37,12 @@ const AddTaskForm = (props) => {
         <form className={styles.form} onSubmit={onSubmit}>
             <Field
                 className={styles.field}
-                label = 'New task title'
+                label='New task title'
                 id='new-task'
-                value = {newTaskTitle}
+                value={newTaskTitle}
                 error={error}
-                onInput = {onInput}
-                ref = {newTaskInputRef}
+                onInput={onInput}
+                ref={newTaskInputRef}
             />
             <Button
                 type='submit'
