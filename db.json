@@ -1,20 +1,4 @@
 {
-  "tasks": [
-    {
-      "title": "1",
-      "isDone": false,
-      "id": "rYJcB5foVqA"
-    },
-    {
-      "title": "2",
-      "isDone": false,
-      "id": "qp2XFshGsXE"
-    },
-    {
-      "title": "3",
-      "isDone": false,
-      "id": "V4D08uAaKQo"
-    }
-  ],
+  "tasks": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
